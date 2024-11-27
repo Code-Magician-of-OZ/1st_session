@@ -1,36 +1,15 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import CounterPage from "./Counter/CounterPage";
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
+function App() {
   return (
     <>
-      <div className="content">
-        <div className="count">
-          <h1>count : {count}</h1>
-        </div>
-        <div className="button">
-          <button
-            className="btn"
-            onClick={() => {
-              setCount((prev) => prev + 1);
-            }}
-          >
-            +1
-          </button>
-          <button
-            className="btn"
-            onClick={() => {
-              setCount((prev) => prev - 1);
-            }}
-          >
-            -1
-          </button>
-        </div>
+      <div>
+        <CounterPage />
       </div>
+      ;
     </>
   );
 }
 
-export default Counter;
+export default App;
